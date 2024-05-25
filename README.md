@@ -1,6 +1,6 @@
 # chat
 
-A new Flutter project.
+Aplicação de Chat - (Firebase, Upload Imagem e Push Notifications)
 
 ## Getting Started
 
