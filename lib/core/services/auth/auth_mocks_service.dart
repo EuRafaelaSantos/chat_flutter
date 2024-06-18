@@ -6,9 +6,9 @@ import 'package:chat/core/services/auth/auth_service.dart';
 
 class AuthMocksService implements AuthService {
   static final _defaultUser = ChatUser(
-    id: '1',
-    nome: 'Teste',
-    email: 'teste@gmail.com ',
+    id: '456',
+    nome: 'User2',
+    email: 'user2@gmail.com',
     imageUrl: 'assets/images/avatar.png',
   );
   static Map<String, ChatUser> _users = {
@@ -21,7 +21,7 @@ class AuthMocksService implements AuthService {
     _updateUser(_defaultUser);
   });
   ChatUser? get currentUser {
-    return null;
+    return _currentUser;
   }
 
   Stream<ChatUser?> get userChanges {
@@ -29,7 +29,11 @@ class AuthMocksService implements AuthService {
   }
 
   Future<void> signup(
-      String nome, String email, String password, File? image) async {
+    String nome,
+    String email,
+    String password,
+    File? image,
+  ) async {
     final newUser = ChatUser(
       id: Random().nextDouble().toString(),
       nome: nome,
