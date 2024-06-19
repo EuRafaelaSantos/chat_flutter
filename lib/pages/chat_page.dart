@@ -87,6 +87,19 @@ class ChatPage extends StatelessWidget {
           ],
         ),
       ),
+      /* floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            Provider.of<ChatNotificationService>(
+              context,
+              listen: false,
+            ).add(
+              ChatNotification(
+                title: 'Nova Notificação',
+                body: Random().nextDouble().toString(),
+              ),
+            );
+          }), botão apenas para testar se adicionava notificações!*/
     );
   }
 }
